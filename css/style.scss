@@ -1,0 +1,50 @@
+*{
+	/*outline: 1px solid green;*/
+}
+.container{
+	background-color: black;
+	font-weight: bold;
+}
+ul{
+	list-style: none;
+	color: white;
+}
+a{
+	text-decoration: none;
+	color: white;
+
+}
+.navegador{
+	display:flex;
+	justify-content: space-between;
+	padding: 8px;
+
+	&_home,
+	&_product,
+	&_about,
+	&_contact{
+		display: none;
+	}
+}
+
+/* Media query*/
+
+@media screen and (min-width: 350px){
+
+	.navegador{
+		justify-content: flex-start;
+
+		&_menu,
+		&_hamburguesa{
+			display: none;
+		}
+		&_home,
+		&_product,
+		&_about,
+		&_contact{
+			display: block;
+			margin-right: 40px;
+		}
+	}
+}
+
